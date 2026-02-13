@@ -13,7 +13,8 @@ import {
   Languages,
   Hash,
   Key,
-  MousePointer2
+  MousePointer2,
+  Github
 } from 'lucide-react';
 import { PasswordOptions, PasswordStrength, LocalAnalysis, PasswordHistoryItem } from './types';
 import StrengthMeter from './components/StrengthMeter';
@@ -327,6 +328,15 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 md:p-8 selection:bg-indigo-500/30">
       <div className="absolute top-4 right-4 md:top-8 md:right-8">
+        <a
+          href="https://github.com/Yecraft2025/Password-Generator"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-white transition-all p-1"
+          title="GitHub Repository"
+        >
+          <Github className="w-5 h-5" />
+        </a>
         <button 
           onClick={() => setLang(prev => prev === 'zh' ? 'en' : 'zh')}
           className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all text-xs font-medium text-gray-400 hover:text-white"
@@ -617,6 +627,16 @@ const App: React.FC = () => {
           <ShieldCheck className="w-3 h-3 text-emerald-500" />
           {t.zeroKnowledge}
         </div>
+        <div className="flex justify-center">
+            <a
+              href="https://github.com/Yecraft2025/Password-Generator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] text-gray-700 hover:text-indigo-400 transition-colors flex items-center gap-1 font-mono-custom"
+            >
+              <span>GITHUB.COM/YECRAFT2025/PASSWORD-GENERATOR</span>
+            </a>
+          </div>
       </footer>
       
       <style>{`
