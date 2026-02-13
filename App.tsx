@@ -327,16 +327,19 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center p-4 md:p-8 selection:bg-indigo-500/30">
-      <div className="absolute top-4 right-4 md:top-8 md:right-8">
+      <div className="absolute top-4 left-4 md:top-8 md:left-8">
         <a
           href="https://github.com/Yecraft2025/Password-Generator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-all p-1"
+          className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all text-xs font-medium text-gray-400 hover:text-white"
           title="GitHub Repository"
         >
-          <Github className="w-5 h-5" />
+        <Github className="w-3.5 h-3.5" />
+        <span className="hidden sm:inline">Source Code</span>
         </a>
+      </div>
+      <div className="absolute top-4 right-4 md:top-8 md:right-8">
         <button 
           onClick={() => setLang(prev => prev === 'zh' ? 'en' : 'zh')}
           className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all text-xs font-medium text-gray-400 hover:text-white"
