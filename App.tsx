@@ -448,15 +448,16 @@ const App: React.FC = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <label className="text-sm text-gray-400">{t.quantity}</label>
+                    <label className="text-sm text-gray-400">{t.length}</label>
+                    ?
                     <input
                         type="number"
-                        min="1"
+                        min="4"
                         max="64"
-                        value={uuidOptions.quantity}
+                        value={options.length}
                         onChange={(e) => {
-                          const val = Math.max(1, Math.min(64, parseInt(e.target.value) || 1));
-                          setUuidOptions({...uuidOptions, quantity: val});
+                        const val = Math.max(4, Math.min(64, parseInt(e.target.value) || 4));
+                        setOptions({ ...options, length: val });
                         }}
                         className="w-16 bg-transparent border-b border-gray-700 text-indigo-400 font-mono-custom font-bold text-lg text-right focus:outline-none focus:border-indigo-500 transition-colors"
                       />
@@ -492,10 +493,23 @@ const App: React.FC = () => {
                  <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <label className="text-sm text-gray-400">{t.quantity}</label>
-                    <span className="text-indigo-400 font-mono-custom font-bold text-lg">{uuidOptions.quantity}</span>
+                    <input
+                      type="number"
+                      min="1"
+                      max="50"
+                      value={uuidOptions.quantity}
+                      onChange={(e) => {
+                        const val = Math.max(1, Math.min(50, parseInt(e.target.value) || 1));
+                        setUuidOptions({ ...uuidOptions, quantity: val });
+                      }}
+                      className="w-16 bg-transparent border-b border-gray-700 text-indigo-400 font-mono-custom font-bold text-lg text-right focus:outline-none focus:border-indigo-500 transition-colors"
+                    />
                   </div>
-                  <input 
-                    type="range" min="1" max="20" value={uuidOptions.quantity}
+                  <input
+                    type="range"
+                    min="1"
+                    max="50"
+                    value={uuidOptions.quantity}
                     onChange={(e) => setUuidOptions({...uuidOptions, quantity: parseInt(e.target.value)})}
                     className="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                   />
