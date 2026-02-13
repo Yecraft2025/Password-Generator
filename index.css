@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* 这里放你之前的自定义样式 */
+body {
+  background: radial-gradient(circle at top left, #111827, #000000);
+  min-height: 100vh;
+  color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono-custom {
+  font-family: 'Fira Code', monospace;
+}
