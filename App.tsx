@@ -448,8 +448,18 @@ const App: React.FC = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <label className="text-sm text-gray-400">{t.length}</label>
-                    <span className="text-indigo-400 font-mono-custom font-bold text-lg">{options.length}</span>
+                    <label className="text-sm text-gray-400">{t.quantity}</label>
+                    <input
+                        type="number"
+                        min="1"
+                        max="64"
+                        value={uuidOptions.quantity}
+                        onChange={(e) => {
+                          const val = Math.max(1, Math.min(64, parseInt(e.target.value) || 1));
+                          setUuidOptions({...uuidOptions, quantity: val});
+                        }}
+                        className="w-16 bg-transparent border-b border-gray-700 text-indigo-400 font-mono-custom font-bold text-lg text-right focus:outline-none focus:border-indigo-500 transition-colors"
+                      />
                   </div>
                   <input 
                     type="range" min="4" max="64" value={options.length}
