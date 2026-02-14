@@ -462,7 +462,6 @@ const App: React.FC = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <label className="text-sm text-gray-400">{t.length}</label>
-                    ?
                     <input
                         type="number"
                         min="4"
