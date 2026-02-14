@@ -637,7 +637,7 @@ const App: React.FC = () => {
               rel="noopener noreferrer"
               className="text-[10px] text-gray-700 hover:text-indigo-400 transition-colors flex items-center gap-1 font-mono-custom"
             >
-              <span>GITHUB.COM/YECRAFT2025/PASSWORD-GENERATOR</span>
+              <span>Yecraft</span>
             </a>
           </div>
       </footer>
