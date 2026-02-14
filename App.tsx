@@ -58,7 +58,7 @@ const translations = {
       days: '天',
       years: '年',
       centuries: '世纪',
-      forever: '宇宙终结前无法破解'
+      forever: '∞'
     },
     tips: {
       length: '增加长度到 12 位以上可以极大提升安全性',
@@ -103,7 +103,7 @@ const translations = {
       days: 'days',
       years: 'years',
       centuries: 'centuries',
-      forever: 'Uncrackable before universe ends'
+      forever: '∞'
     },
     tips: {
       length: 'Increasing length beyond 12 significantly boosts security',
